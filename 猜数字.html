@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>猜数字小游戏</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>这里是猜数字小游戏</h1>
+			请输入您的猜测（0-10之间的整数）:
+			<input v-model="userNumber" /><br />
+			<p v-if="userNumber==number">恭喜你猜对了！</p>
+			<p v-if="userNumber>number">猜大了</p>
+			<p v-if="userNumber<number">猜小了</p>
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					number:Math.floor(Math.random()*10),
+					userNumber:'',
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>
