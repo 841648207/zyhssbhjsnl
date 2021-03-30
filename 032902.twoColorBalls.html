@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>双色球号码随机生成器</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			红球：{{red1}},{{red2}},{{red3}},{{red4}},{{red5}},{{red6}} 蓝球：{{blue}}
+			<input v-on:click="red1=Math.ceil(Math.random()*10);red2=Math.ceil(Math.random()*10);red3=Math.ceil(Math.random()*10);red4=Math.ceil(Math.random()*10);red5=Math.ceil(Math.random()*10);red6=Math.ceil(Math.random()*10);blue=Math.ceil(Math.random()*10);" type="button" name="" id="" value="生成双色球" />
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					red1:'',
+					red2:'',
+					red3:'',
+					red4:'',
+					red5:'',
+					red6:'',
+					blue:''
+				}
+			})
+		</script>
+	</body>
+</html>
