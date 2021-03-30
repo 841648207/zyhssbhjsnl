@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>985-211大学判断</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			请输入要查询的大学：<input v-model="school" />
+			<p v-if="school=='北京大学'">{{school}} , 该校是985、211院校</p>
+			<p v-if="school=='清华大学'">{{school}} , 该校是985、211院校</p>
+			<p v-if="school=='复旦大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='上海交通大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='中国科学技术大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='南京大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='浙江大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='同济大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='北京航空航天大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='浙江大学医学院'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='南开大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='哈尔滨工业大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='北京理工大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='西安交通大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='中国人民大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='华中科技大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='北京师范大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='武汉大学'">{{school}},该校是985、211院校</p>
+			<p v-if="school=='国防科技大学'">{{school}},该校是985、211院校</p>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					school:''
+				}
+			})
+		</script>
+	</body>
+</html>
