@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<!-- 请输入您想要查看的大学序号（1-4）：<input v-model="num" type="text" name="" id="" value="" /><br/> -->
+				{{school[1].name}},{{school[1].location}}
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					num:'',
+					school:[
+						{name:'哈佛大学',location:'美国马萨诸塞州波士顿都市区剑桥市'},
+						{name:'复旦大学',location:'中国上海'},
+						{name:'牛津大学',location:'英国牛津'},
+						{name:'剑桥大学',location:'英国剑桥'},
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
