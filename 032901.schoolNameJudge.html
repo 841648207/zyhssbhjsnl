@@ -7,32 +7,24 @@
 	</head>
 	<body>
 		<div id="app">
-			请输入要查询的大学：<input v-model="school" />
-			<p v-if="school=='北京大学'">{{school}} , 该校是985、211院校</p>
-			<p v-if="school=='清华大学'">{{school}} , 该校是985、211院校</p>
-			<p v-if="school=='复旦大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='上海交通大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='中国科学技术大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='南京大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='浙江大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='同济大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='北京航空航天大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='浙江大学医学院'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='南开大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='哈尔滨工业大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='北京理工大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='西安交通大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='中国人民大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='华中科技大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='北京师范大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='武汉大学'">{{school}},该校是985、211院校</p>
-			<p v-if="school=='国防科技大学'">{{school}},该校是985、211院校</p>
+			请输入要查询的大学：<input v-model="school"><br>
+			<p v-for="s in schools" v-if="s.name==school">您查询的大学为：{{s.name}} , 该校是{{s.type}}院校</p>
+
 		</div>
 		<script type="text/javascript">
 			let v=new Vue({
 				el:'#app',
 				data:{
-					school:''
+					school:'',
+					schools:[
+						{name:'清华大学',type:'985、211'},
+						{name:'西安交通大学',type:'985、211'},
+						{name:'中国人民大学',type:'985、211'},
+						{name:'华中科技大学',type:'985、211'},
+						{name:'北京师范大学',type:'985、211'},
+						{name:'武汉大学',type:'985、211'},
+						{name:'国防科技大学',type:'985、211'}
+					]
 				}
 			})
 		</script>
