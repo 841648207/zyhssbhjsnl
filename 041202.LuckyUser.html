@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>幸运用户抽奖程序</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<button type="button" v-on:click="num=Math.floor(Math.random()*10);"/>抽取幸运用户</button>
+				<p v-if="num">幸运用户是:{{users[num].name}}</p>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					num:'',
+					users:[
+						{name:'乐嫣'},
+						{name:'皓都'},
+						{name:'长歌'},
+						{name:'阿诗勒隼'},
+						{name:'弥弥古丽'},
+						{name:'阿窦'},
+						{name:'小五'},
+						{name:'涉尔'}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
