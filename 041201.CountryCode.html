@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>国家代码查询器</title>
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="app">
 			<div>
-				<input v-model="num" type="text" name="" id="" value="" /><br/>
+				请输入国家代码：<input v-model="num" type="text" name="" id="" value="" /><br/>
 				<p v-if="num==44">你输入的国家代码是+{{country[0].n}},它表示{{country[0].name}},首都为：{{country[0].shoudu}}</p>
 				<p v-if="num==86">你输入的国家代码是+{{country[1].n}},它表示{{country[1].name}},首都为：{{country[1].shoudu}}</p>
 				<p v-if="num==1">你输入的国家代码是+{{country[2].n}},它表示{{country[2].name}},首都为：{{country[2].shoudu}}</p>
