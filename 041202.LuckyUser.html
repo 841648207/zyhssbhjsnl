@@ -8,8 +8,8 @@
 	<body>
 		<div id="app">
 			<div>
-				<button type="button" v-on:click="num=Math.floor(Math.random()*10);"/>抽取幸运用户</button>
-				<p v-if="num">幸运用户是:{{users[num].name}}</p>
+				<button v-on:click="num=Math.ceil(Math.random()*10);"/>抽取幸运用户</button>
+				<p v-for="u in users" v-if="u.id==num">幸运用户是:{{u.name}}</p>
 			</div>
 		</div>
 		
@@ -19,14 +19,14 @@
 				data:{
 					num:'',
 					users:[
-						{name:'乐嫣'},
-						{name:'皓都'},
-						{name:'长歌'},
-						{name:'阿诗勒隼'},
-						{name:'弥弥古丽'},
-						{name:'阿窦'},
-						{name:'小五'},
-						{name:'涉尔'}
+						{id:'1',name:'乐嫣'},
+						{id:'2',name:'皓都'},
+						{id:'3',name:'长歌'},
+						{id:'4',name:'阿诗勒隼'},
+						{id:'5',name:'弥弥古丽'},
+						{id:'6',name:'阿窦'},
+						{id:'7',name:'小五'},
+						{id:'8',name:'涉尔'}
 					]
 				}
 			})
