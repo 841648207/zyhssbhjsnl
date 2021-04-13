@@ -7,20 +7,8 @@
 	</head>
 	<body>
 		<div id="app">
-			请输入月份：
-			<input v-model="num" /><br />
-			<p v-if="num==1">1月份有31天</p>
-			<p v-if="num==2">2月份有28天</p>
-			<p v-if="num==3">3月份有31天</p>
-			<p v-if="num==4">4月份有30天</p>
-			<p v-if="num==5">5月份有31天</p>
-			<p v-if="num==6">6月份有30天</p>
-			<p v-if="num==7">7月份有31天</p>
-			<p v-if="num==8">8月份有31天</p>
-			<p v-if="num==9">9月份有30天</p>
-			<p v-if="num==10">10月份有31天</p>
-			<p v-if="num==11">11月份有30天</p>
-			<p v-if="num==12">12月份有31天</p>
+			请输入月份：<input v-model="num" /><br />
+			<p v-for="d in months" v-if="d.n==num">{{d.n}}月份有{{d.days}}天</p>
 		</div>
 		
 		<script type="text/javascript">
@@ -28,6 +16,20 @@
 				el:'#app',
 				data:{
 					num:'',
+					months:[
+						{n:'1',days:'31'},
+						{n:'2',days:'28'},
+						{n:'3',days:'31'},
+						{n:'4',days:'30'},
+						{n:'5',days:'31'},
+						{n:'6',days:'30'},
+						{n:'7',days:'31'},
+						{n:'8',days:'31'},
+						{n:'9',days:'30'},
+						{n:'10',days:'31'},
+						{n:'11',days:'30'},
+						{n:'12',days:'31'}
+					]
 				},
 			})
 		</script>
