@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<img src="./img/school.PNG" @click="show()">
+		</div>
+		
+		<script type="text/javascript">
+		let v=new Vue({
+			el:'#app',
+			data:{
+			},
+			methods:{
+				show(){
+					//alert("x,y="+event.clientX+","+event.clientY);
+					console.log("x,y="+event.clientX+","+event.clientY);
+				}
+				
+			}
+		})	
+		</script>
+	</body>
+</html>
