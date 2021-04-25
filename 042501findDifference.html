@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>找不同小游戏</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<img src="img/game.jpg" @click="playFunction()">
+			<p>您已找出{{number}}处不同，一共有5处。</p>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					number1:0,
+					number2:0,
+					number3:0,
+					number4:0,
+					number5:0,
+					number:0
+				},
+				methods:{
+					playFunction(){
+						if(400<event.clientX && event.clientX<439 && 216<event.clientY && event.clientY<252 
+						|| 887<event.clientX && event.clientX<922 && 216<event.clientY && event.clientY<252){
+							v.number1++;
+							v.number++;
+							if(v.number1>1){
+								v.number1--;
+								v.number--;
+								alert("您已经找过此处了，再试试其他地方。")
+							}
+						}
+						if(237<event.clientX && event.clientX<262 && 127<event.clientY && event.clientY<136
+						|| 718<event.clientX && event.clientX<737 && 127<event.clientY && event.clientY<136){
+							v.number2++;
+							v.number++;
+							if(v.number2>1){
+								v.number2--;
+								v.number--;
+								alert("您已经找过此处了，再试试其他地方。")
+							}
+						}
+						if(190<event.clientX && event.clientX<205 && 299<event.clientY && event.clientY<322
+						|| 673<event.clientX && event.clientX<686 && 297<event.clientY && event.clientY<318){
+							v.number3++;
+							v.number++;
+							if(v.number3>1){
+								v.number3--;
+								v.number--;
+								alert("您已经找过此处了，再试试其他地方。")
+							}
+						}
+						if(330<event.clientX && event.clientX<362 && 446<event.clientY && event.clientY<476
+						|| 812<event.clientX && event.clientX<834 && 446<event.clientY && event.clientY<476){
+							v.number4++;
+							v.number++;
+							if(v.number4>1){
+								v.number4--;
+								v.number--;
+								alert("您已经找过此处了，再试试其他地方。")
+							}
+						}
+						if(75<event.clientX && event.clientX<88 && 421<event.clientY && event.clientY<446
+						|| 556<event.clientX && event.clientX<576 && 421<event.clientY && event.clientY<446){
+							v.number5++;
+							v.number++;
+							if(v.number5>1){
+								v.number5--;
+								v.number--;
+								alert("您已经找过此处了，再试试其他地方。")
+							}
+						}
+						if(v.number==5){
+							alert("恭喜你!通过游戏!");
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
