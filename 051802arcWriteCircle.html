@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>输入框绘制多种圆形</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="500" height="500"></canvas>
+		
+		<div id="app">
+			<input type="button" value="点击绘制" @click="show()" name="" id=""/>
+			<input type="text" name="" id="r" value="" />
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				methods:{
+					
+					show(){
+						let rr=document.getElementById("r");
+						let canvas=document.getElementById("myCanvas");
+						let context=canvas.getContext("2d");
+						context.beginPath();
+						context.arc(200,200,r.value,0,2*Math.PI);
+						context.stroke();
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
