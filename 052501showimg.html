@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="" height=""></canvas>
+		
+		<div id="app">
+			<input type="button" name="" id="" @click="show()" value="点击显示图片" />
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					
+				},
+				methods:{
+					show(){
+						let canvas=document.getElementById("myCanvas");
+						let context=canvas.getContext("2d");
+						let img=new Image();
+						img.src="./img/background.png";
+						context.drawImage(img,0,0,200,100);
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
