@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="800" height="600"></canvas>
+		
+		<div id="app">
+			<input type="text" name="" @keyup.enter="show()" id="myText" value="" placeholder="请输入国家名,以回车键确定"/>
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					
+				},
+				methods:{
+					show(){
+						let canvas=document.getElementById("myCanvas");
+						let context=canvas.getContext("2d");
+						let img=new Image();
+						
+						let text=document.getElementById("myText").value;
+						if (text=="china") {
+							img.src="./img/china.png";
+						}
+						if (text=="korea") {
+							img.src="./img/korea.jpg";
+						}
+						img.onload=function(){
+							context.drawImage(img,0,0,600,400);
+						}
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
