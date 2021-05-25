@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>绘制矩形</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+		
+		<div id="app">
+			<input type="button" value="点击绘制" @click="show()" name="" id=""/>
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				methods:{
+					
+					show(){
+						let canvas=document.getElementById("myCanvas");
+						let context=canvas.getContext("2d");
+						context.fillRect(25,25,100,100);
+						context.fillRect(45,45,60,60);
+						context.strokeRect(50,50,50,50);
+						context.fill();
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
